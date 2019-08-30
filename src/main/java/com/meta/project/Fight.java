@@ -1,9 +1,6 @@
 package com.meta.project;
 
-import com.meta.project.entities.Pokemon;
-import com.meta.project.entities.Team;
-import com.meta.project.entities.Type;
-import com.meta.project.entities.Weather;
+import com.meta.project.entities.*;
 import com.meta.project.entities.weathers.NoWeather;
 import com.meta.project.exceptions.InvalidTeamException;
 import com.meta.project.exceptions.PokemonNotFoundException;
@@ -61,5 +58,22 @@ public class Fight {
 
     public void addPokemon(String team, Pokemon pokemon) throws InvalidTeamException {
         selectTeam(team).add(pokemon);
+    }
+
+    public Pokemon retrievePokemon(String teamName, Integer pokemonId) throws InvalidTeamException {
+        Team team = selectTeam(teamName);
+        return team.retrievePokemon(pokemonId);
+    }
+
+    public Pokemon retrieveDefendingPokemon(String teamName) throws InvalidTeamException {
+        Team team = selectTeam(teamName);
+
+        if (team == first) {
+            team = second;
+        } else {
+            team = first;
+        }
+
+        return team.getPokemons().values().iterator().next();
     }
 }

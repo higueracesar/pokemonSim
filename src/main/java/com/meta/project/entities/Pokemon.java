@@ -9,10 +9,20 @@ public class Pokemon {
     private Type type;
     private Integer level;
 
-    private Integer HP;
+    private Double hp;
     private Integer defense;
     private Integer specialDefense;
     private Integer attack;
     private Integer specialAttack;
     private Integer speed;
+
+    public void receiveAttack(Attack attack) {
+        Double damage = attack.computeDamage();
+
+        if (this.hp >= damage) {
+            this.hp -= damage;
+        } else {
+            this.hp = 0d;
+        }
+    }
 }

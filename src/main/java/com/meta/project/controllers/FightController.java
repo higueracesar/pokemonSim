@@ -29,7 +29,7 @@ public class FightController {
     @PostMapping("{team}/{pokemonId}/{type}")
     public Fight setType(@PathVariable("team") String team,
                          @PathVariable("pokemonId") Integer pokemonId,
-                         @PathVariable("type") String type) throws PokemonNotFoundException, InvalidTeamException, InvalidPokemonTypeException {
+                         @PathVariable("type") String type) throws PokemonNotFoundException, InvalidTeamException {
         return fightService.setType(team, pokemonId, type);
     }
 

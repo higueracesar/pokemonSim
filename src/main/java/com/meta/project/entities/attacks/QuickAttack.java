@@ -7,12 +7,9 @@ public class QuickAttack extends Attack {
 
     public QuickAttack() {
         this.displayName = "Quick Attack";
+        this.value = "QuickAttack";
 
+        this.baseStrength = 20d;
         this.type = TypeFactory.createTypeStatic("Normal");
-    }
-
-    @Override
-    public Double computeDamage() {
-        return null;
     }
 }

@@ -6,4 +6,9 @@ public class NullType extends Type {
     public NullType() {
         this.displayName = "No Type";
     }
+
+    @Override
+    public Double computeAttackModifier(Type type) {
+        return 1d;
+    }
 }

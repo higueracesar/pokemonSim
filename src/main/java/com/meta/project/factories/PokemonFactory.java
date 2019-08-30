@@ -15,7 +15,7 @@ public class PokemonFactory {
         Pokemon pokemon = new Pokemon();
         pokemon.setName(pokemonDTO.getName());
         pokemon.setLevel(pokemonDTO.getLevel());
-        pokemon.setHP(pokemonDTO.getHP());
+        pokemon.setHp(pokemonDTO.getHP());
         pokemon.setAttack(pokemonDTO.getAttack());
         pokemon.setSpecialAttack(pokemonDTO.getSpecialAttack());
         pokemon.setDefense(pokemonDTO.getDefense());

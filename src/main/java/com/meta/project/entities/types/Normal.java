@@ -6,4 +6,9 @@ public class Normal extends Type {
     public Normal() {
         this.displayName = "Normal";
     }
+
+    @Override
+    public Double computeAttackModifier(Type type) {
+        return 1d;
+    }
 }

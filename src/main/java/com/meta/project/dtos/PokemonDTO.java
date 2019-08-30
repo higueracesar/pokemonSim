@@ -9,7 +9,7 @@ public class PokemonDTO {
     private String type;
     private Integer level;
 
-    private Integer HP;
+    private Double HP;
     private Integer defense;
     private Integer specialDefense;
     private Integer attack;

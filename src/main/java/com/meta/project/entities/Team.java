@@ -44,4 +44,8 @@ public class Team {
 
         pokemons.get(pokemonId).setType(type);
     }
+
+    public Pokemon retrievePokemon(Integer pokemonId) {
+        return pokemons.get(pokemonId);
+    }
 }
